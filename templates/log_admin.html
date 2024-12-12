@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/nav.css">
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link rel="shortcut icon" href="/static/img/logo1.png" type="image/x-icon">
+    <title>Temuan Barang Hilang</title>
+</head>
+<body>
+
+    <div class="content" style="height: 91vh;">
+        <div class="intro">
+            <div class="welcome">
+                <p>Welcome,</p>
+                <p>Aplikasi Website Penemuan Barang Hilang</p>
+                <p>Website penemuan barang hilang merupakan platform yang sangat berguna 
+                    bagi orang yang kehilangan barang-barang berharga. Melalui situs ini,
+                    pengguna dapat dengan mudah melaporkan barang yang hilang, memberikan
+                    deskripsi, dan bahkan mengunggah foto barang tersebut.
+                    Gunakan Aplikasi Website Secara Pintar & Bijaksana Setiap Perbuatan Merupakan Tanggung Jawab yang Bersangkutan</p>
+            </div>
+            <div class="introimg">
+                <div class="imgambar"></div>
+            </div>
+        </div>
+    </div>
+    <div id="contentAdmin" class="modalAdmin">
+        <div class="modal-Admin">
+            <a href="{{ url_for('dashboard') }}" class="close_logo1">BACK</a>
+            <div class="ModalTitleAdmin">
+                <p>LOGIN ADMIN</p>
+            </div>
+            <form action="{{ url_for('log_admin') }}" method="post" class="form-login formAdmin">
+                <div class="msg" style="color: red;">{{ msgAdmin }}</div>
+                <div class="login">
+                    <input id="emailAdmin" name="emailAdmin" type="text" placeholder="Enter Your Email" class="form-control"/>
+                </div>
+                <div class="login">
+                    <input id="passwordAdmin" name="passwordAdmin" type="password" placeholder="Enter Your Password" class="form-control"/>
+                </div>
+                <input type="submit" class="btn btn-log" value="LOGIN"></br>
+            </form>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Barang Hilang</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/img/logo1.png" type="image/x-icon">
+    <style>
+        .container-login100 {
+            background-image: linear-gradient(127deg, #2c1c35 0%, #2c250a 91%);
+        }
+    </style>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(/static/img/gambar-login.png)">
+					<span class="login100-form-title-1" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
+						Sign In Admin
+					</span>
+				</div>
+
+				<form class="login100-form validate-form form-login" action="{{ url_for('log_admin') }}" method="post">
+                    <div class="msg" style="color: red;">{{ msg }}</div>
+					<div class="wrap-input100 validate-input m-b-26 login" data-validate="Email is required">
+						<span class="label-input100" style="font-family: 'Poppins', sans-serif;">Email</span>
+						<input id="emailAdmin" class="input100 emailAdmin" type="text" name="emailAdmin" placeholder="Enter Email Admin" style="font-family: 'Poppins', sans-serif;">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18 login" data-validate = "Password is required">
+						<span class="label-input100" style="font-family: 'Poppins', sans-serif;">Password</span>
+						<input id="passwordAdmin" class="input100 passwordAdmin" type="password" name="passwordAdmin" placeholder="Enter Password" style="font-family: 'Poppins', sans-serif;">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn flex-sb-m w-full p-b-30">
+                        <input class="login100-form-btn" type="submit" value="Login" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

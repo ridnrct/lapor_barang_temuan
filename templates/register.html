@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Barang Hilang - Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/img/logo1.png" type="image/x-icon">
+    <style>
+        .container-login100 {
+            background-image: linear-gradient(127deg, #2c1c35 0%, #2c250a 91%);
+        }
+    </style>
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/static/img/gambar-login.png)">
+                    <span class="login100-form-title-1" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
+                        Sign Up
+                    </span>
+                </div>
+                {% if msg %}
+                <div class="alert alert-info" style="margin: 10px; font-family: 'Poppins', sans-serif; text-align: center;">
+                    {{ msg }}
+                </div>
+                {% endif %}
+                <form class="login100-form validate-form form-register" action="{{ url_for('register') }}" method="post">
+
+                    <!-- Input Username -->
+                    <div class="wrap-input100 validate-input m-b-26 login" data-validate="Username is required">
+                        <span class="label-input100" style="font-family: 'Poppins', sans-serif;">Username</span>
+                        <input id="username" class="input100" type="text" name="username" placeholder="Enter Username" style="font-family: 'Poppins', sans-serif;">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <!-- Input Email -->
+                    <div class="wrap-input100 validate-input m-b-26 login" data-validate="Email is required">
+                        <span class="label-input100" style="font-family: 'Poppins', sans-serif;">Email</span>
+                        <input id="email" class="input100 email" type="text" name="email" placeholder="Enter Email" style="font-family: 'Poppins', sans-serif;">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <!-- Input Password -->
+                    <div class="wrap-input100 validate-input m-b-18 login" data-validate="Password is required">
+                        <span class="label-input100" style="font-family: 'Poppins', sans-serif;">Password</span>
+                        <input id="password" class="input100 password" type="password" name="password" 
+                            placeholder="Enter Password" style="font-family: 'Poppins', sans-serif;" 
+                            minlength="8" pattern="^\S+$" required>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <!-- Submit -->
+                    <div class="container-login100-form-btn flex-sb-m w-full p-b-30">
+                        <input class="login100-form-btn" type="submit" value="Register" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
+                        <div>
+                            <p class="txt1" style="font-family: 'Poppins', sans-serif;">
+                                Already have an account? <a href="{{ url_for('login') }}">Sign In</a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

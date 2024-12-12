@@ -1,0 +1,38 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #3c0477 !important;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-right: 10px;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px hsla(0, 0%, 0%, 0.55);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1E1E1E !important;
+    background-color: white;
+}
+
+/* Adjust button size for mobile */
+@media (max-width: 768px) {
+    .nav-link {
+        margin: 5px 0;
+        display: block;
+        text-align: center;
+    }
+}
