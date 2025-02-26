@@ -36,8 +36,8 @@ mysql = MySQL(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'ridhanurrachmat240802@gmail.com'  
-app.config['MAIL_PASSWORD'] = 'wnhw whcf moqn ioqc'    
+app.config['MAIL_USERNAME'] = 'email_anda@gmail.com'  
+app.config['MAIL_PASSWORD'] = 'password_email_aplikasi'    
 mail = Mail(app)
 
 # Serializer untuk membuat token verifikasi
@@ -269,8 +269,8 @@ def add_item():
 
 
 def notify_admin():
-    sender_email = "ridhanurrachmat240802@gmail.com"  
-    sender_password = "wnhw whcf moqn ioqc" 
+    sender_email = "email_anda@gmail.com"  
+    sender_password = "password_email_aplikasi" 
 
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute('SELECT email FROM admin_login')
