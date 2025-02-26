@@ -25,7 +25,7 @@ Website ini memungkinkan pengguna melaporkan barang temuan. Fitur utama meliputi
 
 ### 1️⃣ **Clone Repository**
 ```bash
-git clone https://github.com/username/website-pelaporan-barang-temuan.git
+git clone https://github.com/ridnrct/website-pelaporan-barang-temuan.git
 cd website-pelaporan-barang-temuan
 ```
 
