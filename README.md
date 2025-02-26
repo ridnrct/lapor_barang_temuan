@@ -69,12 +69,6 @@ Akses website di: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-## 🎞️ Konfigurasi Path Upload
-- Path upload default: `uploads/`
-- Pastikan folder `uploads/` ada di root project.
-
----
-
 ## 🌐 Cara Menggunakan
 1. **Register**: Daftar akun dengan verifikasi email.
 2. **Login**: Masuk dan laporkan barang temuan.
